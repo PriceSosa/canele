@@ -1,0 +1,95 @@
+<div id="secondaryMenu" class="container-fluid">
+	<ul class="nav nav-tabs visible-lg visible-md visible-sm hidden-xs menuTabs">
+		<li ng-repeat="menu in model.menus">
+			<a ng-click="setMenu(menu)">{{menu.MENU}}</a>
+		</li>
+	</ul>
+	<ul class="nav nav-tabs nav-stacked hidden-lg hidden-md hidden-sm visible-xs">
+		<li ng-show="!model.showMenu"><a ng-click="showMenus()">Menu Navigation</a></li>
+		<li ng-repeat="menu in model.menus" ng-show="model.showMenu">
+			<a ng-click="setMenu(menu)">{{menu.MENU}}</a>
+		</li>
+	</ul>
+
+<!-- 	<h3 style="font-family: 'imperiaregular', Arial, sans-serif; font-size: 29px; border-bottom: 0px #aaaaaa solid; padding-top: 1em;">{{model.menu.MENU | uppercase}} MENU</h3> -->
+</div>
+
+<h3 class="col-md-12" style="text-align: center; font-family: 'imperiaregular', Arial, sans-serif; font-size: 29px; border-bottom: 0px #aaaaaa solid; padding-top: 1em;">{{model.menu.MENU | uppercase}}</h3>
+
+
+<!-- BIG MENUS -->
+<div class="container col-md-8 col-md-offset-2 visible-lg visible-md visible-sm hidden-xs" 
+	style="background-color:rgba(255,255,255,0.45); border: 3px #000000 solid; margin-top: 30px;">
+	<!-- LEFTS -->
+	<div class="container col-md-12">
+		<div ng-repeat="category in model.categories | filter: {MENUID: model.menu.MENUID}:true">
+			<h3 class="menuCategory" style="border-bottom: 1px #909090 solid; padding: 5px;">{{category.MENUCATEGORY | uppercase}}</h3>
+
+			<div class="col-md-12" style="padding-bottom: 30px;">
+			<table class="col-md-6">
+				<tr ng-repeat-start="food in model.foods | filter: {MENUCATEGORYID: category.MENUCATEGORYID} | filter: {ACTIVE: 1}" ng-if="$odd">
+					<!-- <td>FOOD1: {{food.MENUITEM}}</td> -->
+					<td class="menuItem col-md-5">{{food.MENUITEM}}</td>
+					<td class="menuItem col-md-1">{{food.PRICE.prices.min | currency}}</td>
+				</tr>
+				<tr ng-repeat-end ng-if="$odd">
+					<td colspan="2" style="padding-bottom: 10px;" class="menuDescription col-md-5">{{food.DESCRIPTION}}</td>
+				</tr>
+			</table>
+			<!-- </div> -->
+
+			<!-- <div class="col-md-6"> -->
+			<table class="col-md-6">
+				<tr ng-repeat-start="food in model.foods | filter: {MENUCATEGORYID: category.MENUCATEGORYID} | filter: {ACTIVE: 1}" ng-if="$even">
+					<!-- <td>FOOD2: {{food.MENUITEM}}</td> -->
+					<td class="menuItem col-md-5">{{food.MENUITEM}}</td>
+					<td class="menuItem col-md-1">{{food.PRICE.prices.min | currency}}</td>
+				</tr>
+				<tr ng-repeat-end ng-if="$even">
+					<td colspan="2" style="padding-bottom: 10px;" class="menuDescription col-md-5">{{food.DESCRIPTION}}</td>
+				</tr>
+			</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- RIGHTS -->
+<!-- 	<div class="container col-md-6">
+		<div ng-repeat="category in model.categories | filter: {MENUID: model.menu.MENUID}:true" ng-if="$odd">
+			<h3 class="menuCategory" style="border-bottom: 1px #909090 solid; padding: 5px;">{{category.MENUCATEGORY | uppercase}}</h3>
+
+			<table>
+				<tr ng-repeat-start="food in model.foods | filter: {MENUCATEGORYID: category.MENUCATEGORYID} | filter: {ACTIVE: 1}">
+					<td class="menuItem col-md-9">{{food.MENUITEM}}</td>
+					<td class="menuItem col-md-3">{{food.PRICE.prices.min | currency}}</td>
+				</tr>
+				<tr ng-repeat-end>
+					<td colspan="2" style="padding-bottom: 10px;" class="menuDescription col-md-10">{{food.DESCRIPTION}}</td>
+				</tr>
+			</table>
+		</div>
+	</div> -->
+</div>
+
+<!-- LITTLE MENUS -->
+<div class="container col-xs-10 col-xs-offset-1 hidden-lg hidden-md hidden-sm visible-xs" 
+	style="background-color:rgba(255,255,255,0.45); border: 3px #000000 solid; margin-top: 30px;">
+
+		<div ng-repeat="category in model.categories | filter: {MENUID: model.menu.MENUID}:true">
+			<h3 class="menuCategory" style="border-bottom: 1px #909090 solid; padding: 5px;">{{category.MENUCATEGORY | uppercase}}</h3>
+
+			<table>
+				<tr ng-repeat-start="food in model.foods | filter: {MENUCATEGORYID: category.MENUCATEGORYID} | filter: {ACTIVE: 1}">
+					<td class="menuItem col-md-9">{{food.MENUITEM}}</td>
+					<td class="menuItem col-md-3">{{food.PRICE.prices.min | currency}}</td>
+				</tr>
+				<tr ng-repeat-end>
+					<td colspan="2" style="padding-bottom: 10px;" class="menuDescription col-md-10">{{food.DESCRIPTION}}</td>
+				</tr>
+<!-- 				<tr ng-repeat="food in model.foods | filter: {MENUCATEGORYID: category.MENUCATEGORYID} | filter: {ACTIVE: 1}">
+					<td class="menuItem col-md-9">{{food.MENUITEM}}</td>
+					<td class="menuItem col-md-3">{{food.PRICE | currency}}</td>
+				</tr> -->
+			</table>
+		</div>
+</div>

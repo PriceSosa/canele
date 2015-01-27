@@ -1,0 +1,57 @@
+
+<!-- <hr> -->
+<style>
+.quoted {
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+</style>
+
+<div class="container-fluid">
+
+	<!-- <div class="row"> -->
+		<div class="col-md-3 col-md-offset-1">
+			<!-- <div cl-news style="padding: 0px 25px 12px 25px; background-color:rgba(255,255,255,0.45); border: 0px #000000 solid;"></div> -->
+			<div cl-news style="padding: 0px 25px 12px 25px;"></div>
+			<div cl-reservations style="padding: 0px 25px 12px 25px; margin-top: 30px;"></div>
+			<div cl-hours style="padding: 0px 25px 12px 25px; margin-top: 30px;"></div>
+
+			<div class="hidden-lg hidden-md hidden-sm visible-xs">
+				<div cl-press-small style="padding: 0px 25px 12px 25px; margin-top: 30px;"></div>
+			</div>
+		</div>
+
+
+		<div class="col-md-7 visible-lg visible-md visible-sm hidden-xs">
+			<!-- wasn't scrolling inside of directive... -->
+			<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+				<div class="carousel-inner" role="listbox" style="height: 400px; margin-left: 0px; border: 3px #000000 solid">
+					<div class="item active">
+						<img src="images/pics/frenchtoast.jpg" alt="..." width="120%;" style="margin-top: -140px;">
+				    </div>
+				    <div class="item">
+						<img src="images/pics/porkbelly.jpg" alt="..." width="120%;" style="margin-top: -30px;">
+				    </div>
+					<div class="item">
+						<img src="images/pics/pate.jpg" alt="..." width="120%;" style="margin-top: -140px;">
+				    </div>
+				    <div class="item">
+						<img src="images/pics/torta.jpg" alt="..." width="120%;" style="margin-top: -140px;">
+				    </div>
+					<div class="item">
+						<img src="images/pics/almondthing.jpg" alt="..." width="120%;" style="margin-top: -140px;">
+				    </div>
+<!-- 				    <div class="item">
+						<img src="images/pics/beandish.jpg" alt="..." width="120%;" style="margin-top: -140px;">
+				    </div> -->
+				</div>
+			</div>
+
+			<div cl-press-small style="padding: 0px 25px 12px 25px; margin-top: 30px; margin-left: 15px;"></div>
+		</div>
+	<!-- </div> -->
+</div>
+<script>
+$('#carousel').carousel();
+// $("#carousel").carousel({interval: 2000});
+</script>

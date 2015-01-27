@@ -1,0 +1,152 @@
+<style>
+body {
+  background-image: url();
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+</style>
+
+<style>
+/* [ng-drag] {
+-moz-user-select: -moz-none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+[ng-drag] {
+width: 100px;
+height: 100px;
+background: rgba(255, 0, 0, 0.5);
+color: white;
+text-align: center;
+padding-top: 40px;
+display: block;
+cursor: move;
+}
+[ng-drag].one {
+background: rgba(255, 0, 0, 0.5);
+}
+[ng-drag].two {
+background: rgba(0, 255, 0, 0.5);
+}
+[ng-drag].three {
+background: rgba(0, 0, 255, 0.5);
+}
+[ng-drag].drag-over {
+border: solid 1px red;
+}
+[ng-drag].dragging {
+opacity: 0.5;
+}
+[ng-drop] {
+background: rgba(0, 0, 0, 0.25);
+text-align: center;
+display: block;
+position: relative;
+padding: 20px;
+width: 140px;
+height: 140px;
+float: left;
+}
+[ng-drop].drag-enter {
+border: solid 5px red;
+}
+[ng-drop] span.title {
+display: block;
+position: absolute;
+top: 50%;
+left: 50%;
+width: 200px;
+height: 20px;
+margin-left: -100px;
+margin-top: -10px;
+}
+[ng-drop] div {
+position: relative;
+z-index: 2;
+}
+.draglist {
+display: inline-block;
+margin: 0 auto;
+}*/
+[ng-drag] {
+	padding: 7px;
+	width: 500px;
+	background-color: #f3f3f3;
+	border: 1px #c8c8c8 solid;
+	margin: 4px;
+}
+[ng-drag] i {
+	float: right;
+}
+[ng-drop] {
+	/*width: 310px;*/
+	/*background-color: #949494;*/
+	list-style: none;
+/*	display: none;
+	position: relative;*/
+}
+/*[ng-drop] span.title {
+display: block;
+position: absolute;
+}
+*/
+[ng-drop].drag-enter {
+	border: solid 1px red;
+}
+.draglist {
+/*display: inline-block;*/
+/*margin: 0 auto;*/
+}
+</style>
+
+<div class="container">
+	<h2 style="padding-bottom: 30px;">ADMIN - ORDER</h2>
+<!-- menu: {{search.menu}}<hr>
+cat: {{search.category}} -->
+	<div class="row">
+        <div class="form-group col-md-3">
+			<label>Menu: </label>
+			<select ng-model="search.menu" ng-options="menu.MENUID as menu.MENU for menu in search.menus" class="form-control">
+			</select>
+		</div>
+
+        <div class="form-group col-md-3">
+			<label>Category: </label>
+			<select ng-model="search.category" class="form-control"
+			    ng-options="category.MENUCATEGORYID as category.MENUCATEGORY for category in search.filteredCategories =
+			                (search.categories | filter: {MENUID: search.menu})"></select>
+		</div>
+	</div>
+
+<hr>
+
+	<div class="row">
+		<div class="alert alert-success col-md-4 col-md-offset-1" role="alert" ng-show="alerts.success">
+		  Success!  Menu Order Updated!<a ng-click="hideSuccess()" class="alert-link pull-right">x</a>
+		</div>
+	</div>
+
+<!-- FOODS{{model.filteredFoods}} -->
+	<div class="row">
+		<div class="col-md-6">
+			<ul class="draglist">
+				<li ng-repeat="obj in model.filteredFoods = (model.foods | filter: {MENUID: search.menu} | filter: {MENUCATEGORYID: search.category})" 
+					ng-drop="true" ng-drop-success="onDropComplete($index, $data, $event)">
+
+					<div ng-drag="true" ng-drag-data="obj" ng-class="obj.MENUITEM">{{obj.MENUITEM}}
+						<i class="glyphicon glyphicon-align-justify" style="float: right;"></i></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+<hr>
+
+    <div class="row form-group">
+		<button class="btn btn-primary" ng-click="updateOrder();">Update Order</button>
+		<button class="btn btn-default" ng-click="cancel();">Search</button>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+<!-- LARGE LAYOUT -->
+<div class="visible-lg visible-md visible-sm hidden-xs">
+	<div class="container-fluid">
+		<div class="col-md-3 col-md-offset-1">
+			<div ng-include="'partials/sidebar/samples.html'" class="sidebarContainer"></div>
+		</div>
+
+		<div class="col-md-7">
+			<div class="mainContainer" ng-include="'partials/catering.html'"></div>
+		</div>
+	</div>
+</div>
+<!-- LARGE LAYOUT -->
+
+<!-- XS LAYOUT -->
+<div class="hidden-lg hidden-md hidden-sm visible-xs">
+	<div class="container-fluid">
+		<div ng-include="'partials/catering.html'" class="col-xs-10 col-xs-offset-1 mainContainer"></div>
+		<div ng-include="'partials/sidebar/samples.html'" class="col-xs-10 col-xs-offset-1 mainContainer"></div>
+	</div>
+</div>
+<!-- XS LAYOUT -->

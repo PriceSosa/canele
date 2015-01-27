@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="canele" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="canele" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="canele" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="canele" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Canele</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"></script>
+  <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css"></script>
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css"></script>
+  <!-- <link rel="stylesheet" href="css/social-buttons.css"></script> -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- <link rel="stylesheet" href="css/app2.css"> -->
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body ng-controller="CaneleCtrl">
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <header> 
+    <div class="container-fluid">
+
+      <div class="visible-lg visible-md visible-sm hidden-xs" ng-include="'partials/md/mainMenu.html'"></div>
+      <div class="hidden-lg hidden-md hidden-sm visible-xs" ng-include="'partials/xs/mainMenu.html'"></div>
+        
+
+      <!-- HEADER STAMPS -->
+      <!-- BIG -->
+      <div class="cnl-row visible-lg visible-md visible-sm hidden-xs" id="headerStamp" ng-hide="adminPage()">
+<!--           <div class="col-xs-12" id="stampIcons" class="text-align: center;">
+          <span class="glyphicon glyphicon-certificate" style="margin-right: 10px;"></span>
+          <span class="icon ion-fork" ></span>
+          <span class="icon ion-knife"></span>
+          <span class="icon ion-spoon"></span>
+          <span class="glyphicon glyphicon-certificate" style="margin-left: 10px;"></span>
+        </div> -->
+
+        <h3 id="stampName">C A N E L É</h3>
+      </div>
+
+      <!-- LITTLE -->
+      <div class="cnl-row hidden-lg hidden-md hidden-sm visible-xs" id="headerStamp-xs" ng-hide="adminPage()">
+<!--           <div class="col-xs-12" id="stampIcons" class="text-align: center;">
+          <span class="glyphicon glyphicon-certificate" style="margin-right: 10px;"></span>
+          <span class="icon ion-fork" ></span>
+          <span class="icon ion-knife"></span>
+          <span class="icon ion-spoon"></span>
+          <span class="glyphicon glyphicon-certificate" style="margin-left: 10px;"></span>
+        </div>
+-->
+        <h3 id="stampName-xs">C A N E L É</h3>
+      </div>
+    </div>
+  </header>
+
+  <div ng-view></div>
+
+  <footer>
+
+    <!-- Bigs -->
+    <div class="visible-lg visible-md visible-sm hidden-xs">
+      <div style="clear: both;">&nbsp;</div><!-- HACK SPACER -->
+
+      <div id="footer" class="container-fluid" style="margin-top: 40px; ">
+        <div class="container col-md-6 col-md-offset-3">
+    
+          <div id="footer-social" style="float: left; padding-top: 3em">
+            <!-- <button class="btn btn-social" style="color: #366eff"><i class="fa fa-twitter fa-2x"></i></button> -->
+            <a href="https://twitter.com/#!/canele_LA"><i class="fa fa-twitter fa-2x icon-social"></i></a>
+            <a href="https://www.facebook.com/canele.la"><i class="fa fa-facebook fa-2x icon-social"></i></a>
+            <a href="http://facebook.com"><i class="fa fa-instagram fa-2x icon-social"></i></a> 
+          </div>
+
+          <div id="address" style="padding-top: 3em; font-size: 12px; text-align: right;">
+            3219 Glendale Blvd<br>Los Angeles, CA 90039<br>323.666.7133
+          </div>
+
+        </div>
+      </div>  
+    </div>
+
+
+    <!-- Small -->
+    <div class="hidden-lg hidden-md hidden-sm visible-xs">
+      <div style="clear: both;">&nbsp;</div><!-- HACK SPACER -->
+
+      <div id="footer" class="container-fluid footer" style="margin-top: 40px; ">
+        <!-- <div class="container col-md-6 col-md-offset-3"> -->
+    
+          <div id="footer-social" style="float: left; padding-top: 3em; padding-left: 1em;">
+            <a href="https://twitter.com/#!/canele_LA"><i class="fa fa-twitter fa-lg icon-social"></i></a>
+            <!-- <a href="fb://friends"><i class="fa fa-facebook fa-lg icon-social"></i></a> -->
+            <a href="https://www.facebook.com/canele.la"><i class="fa fa-facebook fa-lg icon-social"></i></a>
+            <a href="http://instagram.com/canele_la"><i class="fa fa-instagram fa-lg icon-social"></i></a> 
+<!--             <button class="btn btn-social-sm"><i class="fa fa-twitter"></i></button>
+            <button class="btn btn-social-sm"><i class="fa fa-facebook"></i></button>
+            <button class="btn btn-social-sm"><i class="fa fa-instagram"></i></button> -->
+          </div>
+
+          <div id="address" style="font-size: 12px; text-align: right; padding-top: 3em; padding-right: 1em;">
+            3219 Glendale Blvd<br>Los Angeles, CA 90039<br>323.666.7133
+          </div>
+
+        <!-- </div> -->
+      </div>  
+    </div>
+  </footer>
+
+
+  <!-- INCLUDES -->
+  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/ngDraggable/ngDraggable.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js"></script>
+
+<!-- <script type="text/javascript" src="http://menus.singleplatform.co/jsload?load=menus.2&apiKey=ke09z8icq4xu8uiiccighy1bw"></script> -->
+
+<!--  <script src="assets/js/vendor/ui-bootstrap-tpls.js"></script> -->
+  <script src="app.js"></script>
+  <script src="home/home.js"></script>
+  <script src="menu/menu.js"></script>
+  <script src="about/about.js"></script>
+  <script src="press/press.js"></script>
+  <script src="friends/friends.js"></script>
+  <script src="catering/catering.js"></script>
+
+  <script src="services/services.menu.js"></script>
+  <script src="services/services.api.js"></script>
+  <script src="directives/directives-display.js"></script>
+  <script src="directives/directives-pictures.js"></script>
+  <script src="directives/directives-utility.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

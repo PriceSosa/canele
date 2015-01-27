@@ -1,0 +1,68 @@
+<style>
+/*md sizes*/
+.articleTitle {
+	/*padding-left: 15px;*/
+	font-weight: 500; 
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding-bottom: 5px;
+}
+
+.articleTitle a {
+
+}
+.articleTitle a:hover {
+
+}
+.articleQuote {
+	/*padding-left: 15px;*/
+	/*padding-top: 10px;	*/
+}
+
+.pressTitleInline {
+	/*margin-left: 30px;*/
+}
+
+/*xs sizes*/
+.articleTitle-xs {
+	/*font-size: 15; */
+	font-size: 14px;
+	font-weight: 500; 
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding-bottom: 8px;
+}
+
+</style>
+
+<!-- LARGE LAYOUT -->
+<div class="visible-lg visible-md visible-sm hidden-xs">
+	<div class="container-fluid">
+		<div class="col-md-3 col-md-offset-1">
+			<div cl-hours style="padding: 0px 25px 12px 25px; background-color:rgba(255,255,255,0.45); border: 3px #000000 solid;"></div>
+			<div cl-takeout style="padding: 0px 25px 12px 25px; margin-top: 30px;"></div>
+			<div cl-catering style="padding: 0px 25px 12px 25px; margin-top: 30px;"></div>
+		</div>
+
+		<div class="col-md-7 mainContainer">
+			<div ng-include="'partials/press/md/latimes1.html'"></div><hr>
+			<div ng-include="'partials/press/md/bonappetit1.html'"></div><hr>
+			<div ng-include="'partials/press/md/laweekly1.html'"></div><hr>
+			<div ng-include="'partials/press/md/latimes2.html'"></div><hr>
+			<div ng-include="'partials/press/md/bonappetit2.html'"></div><hr>
+		</div>
+	</div>
+</div>
+<!-- LARGE LAYOUT -->
+
+<!-- SMALL LAYOUT -->
+<div class="hidden-lg hidden-md hidden-sm visible-xs">
+	<div class="container-fluid">
+		<div class="col-xs-10 col-xs-offset-1 mainContainer">
+			<div ng-include="'partials/press/xs/latimes1.html'"></div><hr>
+			<div ng-include="'partials/press/xs/bonappetit1.html'"></div><hr>
+			<div ng-include="'partials/press/xs/laweekly1.html'"></div><hr>
+			<div ng-include="'partials/press/xs/latimes2.html'"></div><hr>
+			<div ng-include="'partials/press/xs/bonappetit2.html'"></div><hr>
+		</div>
+	</div>
+</div>
+<!-- SMALL LAYOUT -->

@@ -1,0 +1,11 @@
+<nav id="mainMenu">
+  <ul class="nav nav-tabs nav-stacked mainTabs">
+    <li ng-show="!model.showMenu"><a ng-click="toggleShowMenu()">Navigation</a></li>
+    <li ng-show="model.showMenu"><a ng-click="goToPath('/home')">Home</a></li>
+    <li ng-show="model.showMenu"><a ng-click="goToPath('/menu')">Menu</a></li>
+    <li ng-show="model.showMenu"><a ng-click="goToPath('/about')">About</a></li>
+    <li ng-show="model.showMenu"><a ng-click="goToPath('/press')">Press</a></li>
+    <li ng-show="model.showMenu"><a ng-click="goToPath('/friends')">Friends Cook</a></li>
+    <li ng-show="model.showMenu"><a ng-click="goToPath('/catering')">Catering</a></li>
+  </ul>
+</nav>

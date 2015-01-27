@@ -1,0 +1,30 @@
+<h3>Sample Menus</h3>
+
+<p>Treats include arancini with a melting cheese filled center, cool and refreshing gazpacho, burrata with pea shoots and mint, rack of lamb on your grill, pasta with melting greens, and of course, canelé.</p>
+
+<p>Take a look-see at a few favorite sample catering menus listed below.</p>
+<!-- {{model.selectedSample}} -->
+<select ng-model="model.selectedSample" ng-options="sample.title for sample in model.samples"></select>
+
+<div ng-include="model.selectedSample.mdpath"></div>
+
+<!-- <table>
+	<tr>
+		<td><a ng-click="showMenu('fund')">Fundraiser For 200</a></td>
+	</tr>
+	<tr>
+		<td><a ng-click="">Shower For 30</a></td>
+	</tr>
+	<tr>
+		<td><a ng-click="">Summer Wedding For 150</a></td>
+	</tr>
+	<tr>
+		<td><a ng-click="">Box Lunch For 33</a></td>
+	</tr>
+	<tr>
+		<td><a ng-click="">Reception For 35</a></td>
+	</tr>
+	<tr>
+		<td><a ng-click="">Wedding Dinner For 35</a></td>
+	</tr>
+</table> -->

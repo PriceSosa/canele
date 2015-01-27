@@ -1,0 +1,43 @@
+<style>
+select {
+    font-size: 20px;
+    border-color:#999; /* without this, it won't work */
+}
+select#denoms {
+	/*-webkit-appearance: none;	*/
+	height: 45px;
+	margin-right: 20px;
+	border: 0;
+}
+</style>
+
+<div>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="giftform" name="giftform" ng-submit="gimme()";>
+		<input type="hidden" name="item_name" value="{{model.item_name}}"/>
+	    <input type="hidden" name="amount" value="{{model.amount}}"/>
+
+		<input type="hidden" name="cmd" value="_xclick">
+		<input type="hidden" name="business" value="info@canele-la.com">
+		<input type="hidden" name="lc" value="US">
+		<input type="hidden" name="currency_code" value="USD">
+		<input type="hidden" name="button_subtype" value="services">
+		<input type="hidden" name="no_note" value="0">
+		<input type="hidden" name="shipping" value="0.00">
+		<input type="hidden" name="bn" value="PP-BuyNowBF:vsgrk7.jpg:NonHostedGuest">
+
+	    <h2 style="padding-bottom: 10px;">Gift Certificates</h2>
+
+	    <p>It's easy: to purchase a gift certificate call us at <b>323.666.7133</b>, stop by the restaurant and do it in person, buy 'em via our Facebook page, or place your order from right here.</p>
+
+	    <p>Simply click which amount you'd like below and then check out using your credit card and/or PayPal account. Be sure to let us know the "to" and "from" as well as any personal message you would like to add in the notes to seller section of check out. Also indicate where you would like us to ship the certificates.</p>
+
+	    <div style="padding: 10px 0px;">
+		    <div class="col-md-offset-3">
+				<select id="denoms" class="col-md-4" ng-model="model.selectedItem" 
+					ng-options="item as item.denomination | currency for item in model.items">
+			    </select>
+			</div>
+		    <button type="submit" class="btn btn-success" style="font-size: 20px;">Gimme!</button>
+		</div>
+	</form>
+</div>

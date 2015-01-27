@@ -1,0 +1,16 @@
+.mainTabs a.active,
+.mainTabs a.active:hover,
+.mainTabs a.active:focus {
+	background-color:rgba(255,255,255,0.1);
+	border: 1px solid transparent;
+	outline: 0;
+}
+
+/*
+.mainMenu > li > a,
+.mainMenu > li > a:hover,
+.mainMenu > li > a:focus {
+	color: black;
+  background-color: blue;
+}
+*/

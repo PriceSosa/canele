@@ -1,0 +1,355 @@
+@font-face {
+    font-family: 'nexa_rust_slabblack_shadow_01';
+    src: url('fonts/NexaRustSlab-BlackShadow01-Free-webfont.eot');
+    src: url('fonts/NexaRustSlab-BlackShadow01-Free-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/NexaRustSlab-BlackShadow01-Free-webfont.woff2') format('woff2'),
+         url('fonts/NexaRustSlab-BlackShadow01-Free-webfont.woff') format('woff'),
+         url('fonts/NexaRustSlab-BlackShadow01-Free-webfont.ttf') format('truetype'),
+         url('fonts/NexaRustSlab-BlackShadow01-Free-webfont.svg#nexa_rust_slabblack_shadow_01') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lulo_cleanoutline_bold';
+    src: url('fonts/LuloCleanOutlineBold-webfont.eot');
+    src: url('fonts/LuloCleanOutlineBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LuloCleanOutlineBold-webfont.woff2') format('woff2'),
+         url('fonts/LuloCleanOutlineBold-webfont.woff') format('woff'),
+         url('fonts/LuloCleanOutlineBold-webfont.ttf') format('truetype'),
+         url('fonts/LuloCleanOutlineBold-webfont.svg#lulo_cleanoutline_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'imperiaregular';
+    src: url('fonts/imperiad-webfont.eot');
+    src: url('fonts/imperiad-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/imperiad-webfont.woff2') format('woff2'),
+         url('fonts/imperiad-webfont.woff') format('woff'),
+         url('fonts/imperiad-webfont.ttf') format('truetype'),
+         url('fonts/imperiad-webfont.svg#imperiaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  /*background-color: #fffffa;*/
+  /*background-color: #eee8dc;*/
+  background-color: #f8f0e6;
+  font-family: 'imperiaregular', Arial, sans-serif;
+  font-size: 17px;
+  /*background-image: url("http://www.transparenttextures.com/patterns/gplay.png");*/
+  /*background-image: url("http://www.transparenttextures.com/patterns/beige-paper.png");*/
+  /*background-image: url("http://www.transparenttextures.com/patterns/45-degree-fabric-light.png");*/
+  /*background-image: url("http://www.transparenttextures.com/patterns/maze-white.png");*/
+  background-image: url("http://www.transparenttextures.com/patterns/fabric-plaid.png");
+  /*background-image: url("http://www.transparenttextures.com/patterns/fabric-1-light.png");*/
+  /*background-image: url("http://www.transparenttextures.com/patterns/cloth-alike.png");*/
+  /*background-image: url("http://www.transparenttextures.com/patterns/fabric-1-light.png");*/
+}
+
+a {
+  color: #446644;
+}
+
+a:hover  {
+  color: #668866;
+  text-decoration: none;
+}
+
+a:visited {
+  /*color: #446644;*/
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 0;
+}
+
+.cnl-row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#headerStamp {
+  /*border: 3px black solid; */
+  border: 0px black solid; 
+  /*background-color:rgba(255,255,255,0.5);*/
+  /*background-color:rgba(100,100,0,0.1);*/
+  /*background-color:rgba(238,223,204,0.0);*/
+  /*background-color: rgba(170,150,140,0.15);*/
+  margin-top: 30px;
+  /*margin-bottom: 30px;*/
+  width: 520px;
+  height: 160px;
+  vertical-align: center;
+  /*display: inline-block;*/
+}
+#headerStamp-xs {
+  /*border: 3px black solid; */
+  border: 0px black solid; 
+  /*background-color:rgba(255,255,255,0.5);*/
+  /*background-color:rgba(0,128,0,0.06);*/
+  /*background-color:rgba(255,255,255,0.5);*/
+  /*background-color: rgba(170,150,140,0.15);*/
+  margin-top: 30px;
+  /*margin-bottom: 30px;*/
+  width: 310px;
+  height: 150px;
+  /*display: inline-block;*/
+}
+
+#stampName {
+  text-align: center;
+  position: relative;
+  top: 40%;
+  font-family: 'nexa_rust_slabblack_shadow_01', Arial, sans-serif;
+  font-size: 74px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#stampName-xs {
+  text-align: center;
+  position: relative;
+  top: 40%;
+  font-family: 'nexa_rust_slabblack_shadow_01', Arial, sans-serif;
+  font-size: 40px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#stampIcons {
+  text-align: center;
+  position: relative;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/**************************/
+/*        MAIN NAV        */
+/**************************/
+#mainMenu {
+  text-align:center;
+  background-color:rgba(0,0,0,0.8);
+  /*background-color:rgba(128,0,0,01.1);*/
+  /*background-color:rgba(46,139,87,01.1);*/
+}
+
+  #mainMenu li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+    /*padding-right: 5px;*/
+  }
+
+    #mainMenu li a {
+      /*font-family: 'imperiaregular', Arial, sans-serif;*/
+      /*font-size: 20px;*/
+      font-family: 'lulo_cleanoutline_bold', Arial, sans-serif;
+      font-size: 15px;
+      /*color: #efefef;*/
+      color: #ffffff;
+    }
+
+    #mainMenu li a:hover {
+      font-family: 'lulo_cleanoutline_bold', Arial, sans-serif;
+      font-size: 15px;
+      border: 1px solid transparent;
+      outline: 0;
+      color: #ffffff;
+      background-color:rgba(255,255,255,0.1);
+      transition:all 0.3s ease-in-out; 
+    }
+
+/*    mainSubs ul.nav li.dropdown:hover ul.dropdown-menu {
+      display: block;    
+    }
+*/
+.mainTabs a.active,
+.mainTabs a.active:hover,
+.mainTabs a.active:focus
+ {
+  background-color:rgba(255,255,255,0.1);
+  border: 1px solid transparent;
+  outline: 0;
+}
+
+/* bootstrap dropdowns toggle on hover */
+.dropdown-menu li:hover .mainSubs {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* bootstrap dropdowns toggle on hover */
+
+.mainSubs {
+  background-color:rgba(0,0,0,0.8);
+}
+
+
+/*
+.mainSubs li a:hover,
+.mainSubs li a:focus {
+  border: 1px solid transparent;
+  outline: 0;
+  color: #000000;
+}
+*/
+
+/**************************/
+/*        SEC NAV         */
+/**************************/
+#secondaryMenu {
+  text-align:center;
+  /*background-color:rgba(0,0,0,0.03); */
+  background-color:rgba(255,255,255,0.23); 
+  /*background-color:rgba(235,235,235,0.7);*/
+  /*background-color: rgba(170,150,140,0.2);*/
+  /*background-color:rgba(170,150,70,0.07); */
+  border-top: 2px #000000 solid;
+  border-bottom: 2px #000000 solid;
+  /*height: 4em;*/
+  /*color: #929292;*/
+  /*font-family: 'nexa_rust_slabblack_shadow_01', Arial, sans-serif;*/
+  /*color: #000000;*/
+}
+  #secondaryMenu li {
+    /*background-color:rgba(255,255,255,0.4);*/
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+    margin-right: 5px;
+  }
+    #secondaryMenu li a {
+      /*font-family: 'imperiaregular', Arial, sans-serif;*/
+      /*font-size: 22px;*/
+      font-family: 'lulo_cleanoutline_bold', Arial, sans-serif;
+      font-size: 15px;
+      color: #000000;
+    }
+    #secondaryMenu li a:hover {
+      /*font-family: 'imperiaregular', Arial, sans-serif;*/
+      /*font-size: 22px;*/
+      font-family: 'lulo_cleanoutline_bold', Arial, sans-serif;
+      font-size: 15px;
+      color: #000000;
+      background-color:rgba(255,255,255,0.3);
+    border: 1px solid transparent;
+      outline: 0;
+      transition:all 0.3s ease-in-out; 
+    }
+
+/**************************/
+/*        MENU STUFF      */
+/**************************/
+.menuCategory {
+  font-family: 'imperiaregular', Arial, sans-serif;
+  font-size: 23px;
+  color: #000000;
+  text-align: center;
+}
+.menuItem {
+  font-family: 'imperiaregular', Arial, sans-serif;
+  font-size: 19px;
+  color: #000000;
+  vertical-align: top;
+}
+.menuDescription {
+  font-family: 'imperiaregular', Arial, sans-serif;
+  font-size: 14px;
+  color: #000000;
+  vertical-align: top;
+}
+.mainContainer {
+  background-color:rgba(255,255,255,0.45); 
+  border: 3px #000000 solid; 
+  margin-bottom: 40px; 
+  padding: 0px 25px 12px 25px;
+}
+
+/**************************/
+/*        SIDEBAR STUFF   */
+/**************************/
+.sidebar-header {
+  padding: 0px;
+}
+
+.sidebarContainerHalf {
+  padding: 0px 25px 12px 25px;
+  margin-bottom: 30px; 
+}
+
+.sidebarContainer {
+  background-color:rgba(255,255,255,0.45); 
+  border: 3px #000000 solid;
+  padding: 0px 25px 12px 25px;
+  margin-bottom: 30px; 
+}
+
+/**************************/
+/*        FOOTER STUFF    */
+/**************************/
+#footer {
+  position: relative;
+  clear:both;
+  height: 120px;
+  margin-top: -120px; /* negative value of footer height */
+  font-family: 'lulo_cleanoutline_bold', Arial, sans-serif;
+  /*font-family: 'imperiaregular', Arial, sans-serif;*/
+  background-color:rgba(0,0,0,0.80);
+  /*background-color:rgba(0,0,0,0.75);*/
+  /*color: #d6d6d6;*/
+  color: #ffffff;
+}
+
+.btn-social {
+  /*background-color:rgba(255,255,255,0.8);*/
+  background-color:rgba(255,255,255,0.1);
+  width: 40px;
+  /*height: 32px;*/
+  color: #ffffff;
+  padding:10px;
+  /*margin-right: 3px;*/
+  vertical-align: middle;
+  text-align: center;
+}
+.btn-social-sm {
+  background-color:rgba(255,255,255,0.8);
+  width: 30px;
+  height: 30px;
+  margin-right: 3px;
+}
+
+#footer-social a {
+  color: #ffffff;
+}
+
+.icon-social {
+  padding-right: 10px;
+}
+.icon-social:hover {
+  color: rgba(255,255,255,0.7);;
+}
+
+/*.nav li.active a {background:blue!important}*/
+
+/************************************************************/
+/*        INTERNET SUGGESTIONS FOR CAROUSEL FADE STUFF      */
+/************************************************************/
+.carousel .item { -webkit-transition: 1.1s ease-in-out opacity; -moz-transition: 1.1s ease-in-out opacity; -ms-transition: 1.1s ease-in-out opacity; -o-transition: 1.1s ease-in-out opacity; transition: 1.1s ease-in-out opacity; left: 0 !important; }
+.carousel .active.left, .carousel .active.right { opacity: 0; z-index: 2; }
+

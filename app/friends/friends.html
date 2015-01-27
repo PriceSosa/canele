@@ -1,0 +1,24 @@
+<!-- LARGE LAYOUT -->
+<div class="visible-lg visible-md visible-sm hidden-xs">
+	<div class="container-fluid">
+		<div class="col-md-3 col-md-offset-1">
+			<div ng-include="'partials/sidebar/friends.html'" class="sidebarContainer"></div>
+			<!-- <div cl-reservations class="sidebarContainerHalf"></div> -->
+			<!-- <div cl-hours class="sidebarContainerHalf"></div> -->
+		</div>
+
+		<div class="col-md-7">
+			<div class="mainContainer" ng-include="'partials/friends.html'"></div>
+		</div>
+	</div>
+</div>
+<!-- LARGE LAYOUT -->
+
+<!-- XS LAYOUT -->
+<div class="hidden-lg hidden-md hidden-sm visible-xs">
+	<div class="container-fluid">
+		<div ng-include="'partials/friends.html'" class="col-xs-10 col-xs-offset-1 mainContainer"></div>
+		<div ng-include="'partials/sidebar/friends.html'" class="col-xs-10 col-xs-offset-1 mainContainer"></div>
+	</div>
+</div>
+<!-- XS LAYOUT -->
